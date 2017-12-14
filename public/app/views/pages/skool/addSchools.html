@@ -1,0 +1,60 @@
+<div class="container">
+<div class="row justify-content-md-center">
+<form ng-submit="addSchools.schoolAdd(addSchools.schoolData);">
+  <h3>REGISTER YOUR SCHOOL  <small class="text-muted"> All the fields are required</small>
+</h3>
+<hr>
+  <fieldset class="form-group">
+    <label for="exampleInputEmail1">School Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" ng-model = "addSchools.schoolData.schoolname" placeholder="Seventh day adventist" required>
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="exampleInputPassword1">School Register Number</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" ng-model = "addSchools.schoolData.registernumber" placeholder="CBIN121221" required>
+    <small class="text-muted">We'll never share your register number with anyone else.</small>
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="exampleSelect1">Standards</label>
+    <select class="form-control" id="exampleSelect1" ng-model = "addSchools.schoolData.schoolclasses" required>
+      <option value="6">upto 6</option>
+      <option value="10">upto 10</option>
+      <option value="12">upto 12</option>
+    </select>
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="exampleSelect1">School Mode</label>
+    <select class="form-control" id="exampleSelect1" ng-model = "addSchools.schoolData.schoolmode" required>
+      <option value="boys">Boys</option>
+      <option value="girls">Girls</option>
+      <option value="coed">Co-ed</option>
+    </select>
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="exampleSelect2">School Type</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" ng-model = "addSchools.schoolData.schooltype" placeholder="Ex. CBSE, ICSE" required>
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="exampleTextarea">About School</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3" ng-model = "addSchools.schoolData.schooldescription" required></textarea>
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="exampleTextarea">School Address</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3" ng-model = "addSchools.schoolData.schooladdress" required></textarea>
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="exampleInputPassword1">School Located in City</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="chennai" ng-model = "addSchools.schoolData.schoolcity" required>
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="exampleSelect1">Application Availability</label>
+    <select class="form-control" id="exampleSelect1" ng-model = "addSchools.schoolData.schoolapplication" required>
+      <option value="availabe">available</option>
+      <option value="not available">not available</option>
+    </select>
+  </fieldset>
+  <hr>
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>

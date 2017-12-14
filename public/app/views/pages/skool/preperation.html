@@ -1,0 +1,71 @@
+<div class="page-header" style="min-height:700px;">
+
+  <div class="container">
+    <br><br><br>
+    <br><br>
+    <div class="alert alert-success" role="alert" ng-show="main.successMessage">
+      <div class="container">
+        <div class="alert-icon">
+          <i class="now-ui-icons ui-2_like"></i>
+        </div>
+        <strong>Well done!</strong> {{main.successMessage}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">
+        <i class="now-ui-icons ui-1_simple-remove"></i>
+      </span>
+    </button>
+      </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" ng-show="main.errorMessage">
+      <div class="container">
+        <div class="alert-icon">
+          <i class="now-ui-icons objects_support-17"></i>
+        </div>
+        <strong>Oh snap!</strong> {{main.errorMessage}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">
+<i class="now-ui-icons ui-1_simple-remove"></i>
+</span>
+</button>
+      </div>
+    </div>
+
+    <div class="card card-login card-plain" style="background-color:black">
+
+      <form class="form" ng-submit="main.login(loginData);">
+        <div class="header header-primary text-center">
+
+          <h4>LOG&nbsp;IN</h4>
+
+        </div>
+        <div class="content">
+          <div class="input-group form-group-no-border input-lg">
+            <span class="input-group-addon">
+                            <i class="now-ui-icons users_circle-08"></i>
+                        </span>
+            <input type="text" class="form-control" placeholder="User Name..." ng-model="main.loginData.username">
+          </div>
+
+          <div class="input-group form-group-no-border input-lg">
+            <span class="input-group-addon">
+                            <i class="now-ui-icons ui-1_lock-circle-open"></i>
+                        </span>
+            <input type="password" placeholder="Password..." class="form-control" ng-model="main.loginData.password" />
+          </div>
+        </div>
+
+        <div class="footer text-center">
+          <input type="submit" class="btn btn-md btn-primary" value="login">
+          <br>
+
+          <br>
+          <a href="/#/register">Register new user</a>
+
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

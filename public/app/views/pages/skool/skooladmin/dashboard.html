@@ -1,0 +1,58 @@
+<nav class="navbar navbar-light bg-faded">
+  <div class="row">
+    <div class="col-sm-6 col-lg-6 col-md-6">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="navbar-brand">
+  <img src="../assets/img/danny.png" width="30" height="25" class="d-inline-block align-top" alt="skool">
+  <span style="font-size:30px;">SKOOL</span>
+  </a>
+        </li>
+      </ul>
+      <span style="color:grey"> India's No 1 School Application Portal</span>
+    </div>
+    <div class="col-sm-6 col-lg-6 col-md-6">
+      <ul class="nav justify-content-end">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="font-size:30px; color:black;" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"><i class="now-ui-icons users_circle-08"></i> {{main.username}}</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" style="font-size:20px; color:black;" href="#" ng-click="main.logout();">Sign Out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3 col-lg-4 offset-lg-2">
+      <div class="card card-1">
+        <h3 style="margin:20px;">VIEW APPLICATION</h3>
+        <p style="margin:20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+          <div class="footer text-center"  style="margin-left:30%; margin-right:30%;">
+        <a class="btn btn-default btn-lg btn-block" ng-click="admin.applicationView();" value="view"><span>VIEW</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 offset-sm-3 col-lg-4 offset-lg-0">
+    <div class="card card-1">
+      <h3 style="margin:20px;">VIEW APPOINMENTS</h3>
+      <p style="margin:20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+        <div class="footer text-center"  style="margin-left:30%; margin-right:30%;">
+      <a class="btn btn-default btn-lg btn-block" ng-click="admin.appoinmentView();" value="view"><span>VIEW</span></a>
+    </div>
+  </div>
+</div>
+<div class="col-sm-6 offset-sm-3">
+  <div class="card card-1">
+    <h3 style="margin:20px;">VIEW SCHOOLS</h3>
+    <p style="margin:20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+      <div class="footer text-center"  style="margin-left:30%; margin-right:30%;">
+    <a class="btn btn-default btn-lg btn-block" ng-click="admin.schoolView();" value="view"><span>VIEW</span></a>
+  </div>
+</div>
+</div>
+</div>

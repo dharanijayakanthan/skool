@@ -1,0 +1,79 @@
+<div class="container" ng-init="applicationv.dance()">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card card-inverse card-info text-center">
+        <div class="card-block">
+          <blockquote class="card-blockquote">
+            <h1>APPLICATION FORM</h1>
+            <footer>application number :<cite title="Source Title"> {{applicationv.vi[0]._id}}</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class="card-header">
+        APPLICANT DETAILS
+      </div>
+      <div class="card-deck-wrapper">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-block">
+              <h6 class="card-title">STUDENT NAME</h6>
+              <p class="card-text" style="color:grey;">{{applicationv.vi[0].studentname}}</p>
+              <h6 class="card-title">GENDER</h6>
+              <p class="card-text" style="color:grey;">{{applicationv.vi[0].gender}}</p>
+              <h6 class="card-title">AGE</h6>
+              <p class="card-text" style="color:grey;">{{applicationv.vi[0].age}}</p>
+              <h6 class="card-title">PROGRAM</h6>
+              <p class="card-text" style="color:grey;">{{applicationv.vi[0].program}}</p>
+              <h6 class="card-title">LANGUAGE</h6>
+              <p class="card-text" style="color:grey;">{{applicationv.vi[0].language}}</p>
+              <h6 class="card-title">NATIONALITY</h6>
+              <p class="card-text" style="color:grey;">{{applicationv.vi[0].nationality}}</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-block">
+              <h6 class="card-title">FATHER NAME</h6>
+              <p class="card-text">{{applicationv.vi[0].fathername}}</p>
+              <h6 class="card-title">FATHER OCCUPATION</h6>
+              <p class="card-text">{{applicationv.vi[0].fathermobile}}</p>
+              <h6 class="card-title">FATHER MOBILE</h6>
+              <p class="card-text">{{applicationv.vi[0].fathermobile}}</p>
+              <h6 class="card-title">FATHER INCOME</h6>
+              <p class="card-text">{{applicationv.vi[0].fatherincome}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-header">
+        FAMILY DETAILS
+      </div>
+      <div class="card-deck-wrapper">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-block">
+              <h6 class="card-title">MOTHER NAME</h6>
+              <p class="card-text">{{applicationv.vi[0].mothername}}</p>
+              <h6 class="card-title">MOTHER OCCUPATION</h6>
+              <p class="card-text">{{applicationv.vi[0].motheroccupation}}</p>
+              <h6 class="card-title">MOTHER MOBILE</h6>
+              <p class="card-text">{{applicationv.vi[0].mothermobile}}</p>
+              <h6 class="card-title">MOTHER INCOME</h6>
+              <p class="card-text">{{applicationv.vi[0].motherincome}}</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-block">
+              <h6 class="card-title">RESIDENTIAL ADDRESS</h6>
+              <p class="card-text">{{applicationv.vi[0].residentialaddress}}</p>
+              <h6 class="card-title">CHRONIC</h6>
+              <p class="card-text">{{applicationv.vi[0].chronic}}</p>
+              <h6 class="card-title">OTHER INFORMATION</h6>
+              <p class="card-text">{{applicationv.vi[0].otherinformation}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" ng-click="applicationv.printIt();">PRINT APPLICATION</button>
+    </div>
+  </div>
+</div>

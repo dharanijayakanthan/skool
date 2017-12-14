@@ -1,0 +1,26 @@
+<br><br><br>
+<div class="card card-01">
+<p>click here to load students application data</p>
+<a type="button" class="btn btn-md btn-primary" ng-click="applicationv.loadmore();"><span>LOAD</span></a>
+</div>
+<div class="features">
+ <div class="row">
+  <div ng-repeat='student in applicationv.applicationData'>
+    <div class="card card-02">
+
+        <h3 class="center-heading">{{student.studentname}}</h3>
+        <p>fathers occupation:{{student.fatheroccupation}} || age:{{student.age}}</p>
+        <p>contact : {{student.fathermobile}} || gender:{{student.gender}} </p>
+        <a type="button" class="btn btn-sm btn-primary" ng-click="applicationv.view(student._id);">VIEW</a>
+
+      </div>
+    </div>
+    </div>
+    <p>{{applicationv.viData.studentname}}</p>
+</div>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
