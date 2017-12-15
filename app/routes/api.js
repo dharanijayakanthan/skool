@@ -47,7 +47,10 @@ search.schoolclasses = req.body.schoolclasses;
     } else {
       search.save(function(err) {
         if (err) {
-          console.log(err);
+          res.json({
+            "success": false,
+            "message": err
+          });
         } else {
           res.json({
             "success": true,

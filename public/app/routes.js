@@ -98,7 +98,13 @@ var app = angular.module('appRoutes', ['ngRoute'])
         controller: 'searchCtrl',
         controllerAs: 'search',
         isAuthenticated: true
+      })
 
+      .when('/applicationFailure', {
+        templateUrl: 'app/views/pages/skool/applicationFailure.html',
+        controller: 'searchCtrl',
+        controllerAs: 'search',
+        isAuthenticated: true
       })
       .when('/addSchools',{
         templateUrl:'app/views/pages/skool/addSchools.html',

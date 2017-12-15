@@ -5,7 +5,6 @@ angular.module('addSchoolsService',[])
 
 addSchoolsFactory.schoolAdd = function(schoolData){
   return $http.post('/api/addSchools',schoolData);
-
 }
 
 

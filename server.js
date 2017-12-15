@@ -17,7 +17,7 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use('/api',appRoutes);
 //mongodb connection mongodb://127.0.0.1:27017
-mongoose.connect('mongodb://127.0.0.1:27017',function(err){
+mongoose.connect('mongodb://skolladmins:admin@ds149724.mlab.com:49724/skoll',function(err){
 if(err){
   console.log("error connecting to db" +err);
 }
