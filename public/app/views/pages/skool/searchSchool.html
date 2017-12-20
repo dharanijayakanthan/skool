@@ -59,7 +59,7 @@ navbar-->
       <div class="row" style="background-color:;">
         <form class="form" ng-submit="search.searchfn(searchData);" style="width:100%;">
           <div class="input-group ip-over-o">
-            <input type="text" class="form-control form-control-md ip-over " placeholder="Enter a location Eg. City,locality or landmark">
+            <input type="text" class="form-control form-control-md ip-over" ng-model="search.searchData.schoolcity" placeholder="Enter a location Eg. City,locality or landmark">
           </div>
           <hr>
           <!--  <div class="row">
@@ -71,21 +71,6 @@ navbar-->
   <option value="3"> STATE BOARD</option>
 </select>
         </div> -->
-
-<div class="dropper">
-  <div class="drops">
-  <div class="dropper-btn">
-<button>dropdown</button>
-  </div>
-  <div class="dropper-value">
-    <p value="coed"> Co-education</p>
-    <p value="boys"> Boys </p>
-    <p value="girls"> Girls</p>
-  </div>
-  </div>
-</div>
-
-        <!--
           <div class="input-group ip-over-p">
             <select class="form-control" id="ip-o" ng-model="search.searchData.schoolmode">
          <option value="coed"> Co-education </option>
@@ -101,7 +86,7 @@ navbar-->
       </div>
     </div>
   </div>
-</div> -->
+</div>
     <!--
       <div class="col-3 col-md-3 col-lg-2">
       <select class="custom-select" style="border: 2px solid green;">

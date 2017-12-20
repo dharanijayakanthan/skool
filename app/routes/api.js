@@ -107,9 +107,9 @@ search.schoolclasses = req.body.schoolclasses;
 
 
   router.post('/search', function(req, res) {
-    console.log(req.body);
     Search.find({
-      schoolmode: req.body.schoolmode
+      schoolmode: req.body.schoolmode,
+      schoolcity: req.body.schoolcity
     }).select('schoolname schooltype schoolapplication schoolmode schoolcity schoolclasses schooldescription schooladdress').exec(function(err, search) {
       if (err) consol.log(err);
       if (search) {
@@ -120,6 +120,7 @@ search.schoolclasses = req.body.schoolclasses;
         });
       } else console.log("nothing is valid");
     })
+  
   })
 
 
@@ -138,8 +139,6 @@ search.schoolclasses = req.body.schoolclasses;
   else console.log("nothing is valid");
   })
   });
-
-
 
   */
 
