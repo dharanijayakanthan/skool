@@ -23,36 +23,6 @@
     </div>
   </div>
 </nav>
-<!--
-<nav class="navbar navbar-light bg-faded">
-  <div class="row">
-    <div class="col-sm-6 nav-check">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="navbar-brand">
-<img src="../assets/img/danny.png" width="30" height="25" class="d-inline-block align-top" alt="skool">
-<span style="font-size:30px;">SKOOL</span>
-</a>
-        </li>
-      </ul>
-      <span style="color:grey"> India's No 1 School Portal</span>
-    </div>
-    <div class="col-sm-6">
-      <ul class="nav justify-content-end">
-        <li class="nav-item" style="font-size:20px; padding:20px;">
-          <a class="nav-signout" style="font-size:20px; color:black;" href="#" ng-click="main.logout();">Sign Out</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" style="font-size:20px; color:black;"  href="/#/addSchools"><i class="now-ui-icons users_circle-08"></i> {{main.username}}</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-navbar-->
-<!--navbar-end-->
-<!--container-->
-<!--search-bar-->
 <div class="search-bar">
   <div class="search-bar-space">
     <div class="container">
@@ -62,15 +32,6 @@ navbar-->
             <input type="text" class="form-control form-control-md ip-over" ng-model="search.searchData.schoolcity" placeholder="Enter a location Eg. City,locality or landmark">
           </div>
           <hr>
-          <!--  <div class="row">
-        <div class="col-3 offset-sm-2 col-md-3 col-lg-3">
-          <select class="custom-select" style="border: 2px solid green;">
-  <option selected>Select Board Type</option>
-  <option value="1">  CBSE </option>
-  <option value="2"> ICSE </option>
-  <option value="3"> STATE BOARD</option>
-</select>
-        </div> -->
           <div class="input-group ip-over-p">
             <select class="form-control" id="ip-o" ng-model="search.searchData.schoolmode">
          <option value="coed"> Co-education </option>
@@ -87,21 +48,18 @@ navbar-->
     </div>
   </div>
 </div>
-    <!--
-      <div class="col-3 col-md-3 col-lg-2">
-      <select class="custom-select" style="border: 2px solid green;">
-  <option selected>Select Boarding/Non boarding</option>
-  <option value="1">Boarding</option>
-  <option value="2">Non Boarding </option>
-</select>
-        </div>
-      -->
-
-<!--searchbar-end-->
+  
 <!--main-container-end-->
 <br><br>
 
-<div class="features">
+<div class="features" ng-show = "noSchools">
+    <div class="row justify-content-center">
+      <div class="col-sm-8 card" style="padding:20px;">
+        <h5 class="center-heading" style="color:rgb(192, 78, 78);">We are currently available only in "vellore" , "chennai" and "bangalore"</h5>
+      </div>
+    </div>
+</div>
+<div class="features" ng-show = "yesSchools">
   <div infinite-scroll='search.loadMore()' infinite-scroll-distance='2' ng-repeat='school in schoolCollection track by $index'>
     <div class="row justify-content-center">
       <div class="col-sm-8 card" style="padding:20px;">

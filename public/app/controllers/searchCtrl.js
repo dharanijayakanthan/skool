@@ -42,37 +42,23 @@ angular.module('searchController', ['searchService', 'infinite-scroll'])
     this.searchfn = function(searchData) {
       search.getResults(this.searchData).then(function(data) {
         //  var length = data.data.schoolname.length;
-        console.log(data.data);
+       $scope.noSchools = false;
+      $scope.yesSchools = false;
 
-$scope.schoolCollection = new Array(data.data.schools.length);
+        if(data.data.schools.length == 0){
+          $scope.noSchools = true;
+
+        }
+        else if(data.data.schools.length != 0){
+          $scope.yesSchools = true;
+   
+        $scope.schoolCollection = new Array(data.data.schools.length);
         for(var i = 0; i<data.data.schools.length; i++)
         {
         $scope.schoolCollection[i] = data.data.schools[i];
        $scope.schoolCollection[i];
         }
-      /*  $scope.schoolName = new Array(1);
-        $scope.schoolMode = new Array(1);
-        $scope.schoolDescription = new Array(1);
-        $scope.schoolAddress = new Array(1);
-        $scope.schoolClasses = new Array(1);
-        $scope.schoolCity = new Array(1);
-        $scope.schoolType = new Array(1);
-        $scope.schoolApplication = new Array(1);
-
-
-        app.loadMore = function() {
-          for (i = 0; i < 10; i++) {
-            $scope.schoolName[i] = data.data.schoolname[i].schoolname;
-            $scope.schoolMode[i] = data.data.schoolname[i].schoolmode;
-            $scope.schoolDescription[i] = data.data.schoolname[i].schooldescription;
-            $scope.schoolAddress[i] = data.data.schoolname[i].schooladdress;
-            $scope.schoolClasses[i] = data.data.schoolname[i].schoolclasses;
-            $scope.schoolCity[i] = data.data.schoolname[i].schoolcity;
-            $scope.schoolType[i] = data.data.schoolname[i].schooltype;
-            $scope.schoolApplication[i] = data.data.schoolname[i].schoolapplication;
-
-          }
-        } */
+      }
       })
     }
     var adminKey = {};
