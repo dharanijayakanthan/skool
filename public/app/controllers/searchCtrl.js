@@ -48,7 +48,7 @@ $scope.schoolCollection = new Array(data.data.schools.length);
         for(var i = 0; i<data.data.schools.length; i++)
         {
         $scope.schoolCollection[i] = data.data.schools[i];
-        console.log(  $scope.schoolCollection[i]);
+       $scope.schoolCollection[i];
         }
       /*  $scope.schoolName = new Array(1);
         $scope.schoolMode = new Array(1);
@@ -78,7 +78,6 @@ $scope.schoolCollection = new Array(data.data.schools.length);
     var adminKey = {};
     //admin access key controller
     this.adminAccess = function() {
-      console.log(this.adminKey);
        adminKey = {
       "password" : this.adminKey
       }
